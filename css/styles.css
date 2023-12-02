@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --ff-kumbh-sans: "Kumbh Sans", sans-serif;
+  --fc-black: 0, 0, 0;
+  --fc-white: 255, 255, 255;
+  --fc-dark-cyan: 26, 161, 173;
+  --fc-dark-blue: 45, 50, 72;
+  --fc-greyish-blue: 106, 111, 129;
+  --fc-dark-grey: 150, 150, 150;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-kumbh-sans);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: rgb(var(--fc-dark-cyan));
+  overflow: hidden;
+  position: relative;
+}
+
+.top-bg {
+  position: absolute;
+  background: url(../images/bg-pattern-top.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 375px;
+  width: 375px;
+  top: -160px;
+  left: -167px;
+}
+
+.bottom-bg {
+  position: absolute;
+  background: url(../images/bg-pattern-bottom.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 375px;
+  width: 375px;
+  bottom: 60px;
+  right: -230px;
+}
+
+.container {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+/* inner containers */
+.profile-name span {
+  font-weight: normal;
+}
+
+.upper-container {
+  min-height: 30vh;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.lower-container {
+  min-height: 30vh;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* upper container */
+.upper-container {
+  background: url(../images/bg-pattern-card.svg);
+}
+
+.author-img {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 50%;
+  border: 5px solid rgb(var(--fc-white));
+}
+
+/* lower container */
+.lower-container {
+  position: relative;
+  background-color: rgb(var(--fc-white));
+}
+
+.profile {
+  margin: 0;
+  padding: 2rem 0 1rem;
+  border-bottom: 1px solid rgba(var(--fc-dark-grey), 0.6);
+}
+
+.figures {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .top-bg {
+    height: 978px;
+    width: 978px;
+    top: -528px;
+    left: -284px;
+  }
+
+  .bottom-bg {
+    height: 978px;
+    width: 978px;
+    bottom: -328px;
+    right: -380px;
+  }
+}
